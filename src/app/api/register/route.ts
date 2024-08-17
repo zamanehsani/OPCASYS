@@ -10,11 +10,12 @@ export async function POST(request: any) {
     return NextResponse.json("Missing Fields", { status: 400 });
   }
 
-  const exist = await prisma.user.findUnique({
-    where: {
-      email: email.toLowerCase(),
-    },
-  });
+  const exist = false;
+  // const exist = await prisma.user.findUnique({
+  //   where: {
+  //     email: email.toLowerCase(),
+  //   },
+  // });
 
   if (exist) {
     return NextResponse.json("User already exists!", { status: 500 });
@@ -22,13 +23,13 @@ export async function POST(request: any) {
 
   const hashedPassword = await bcrypt.hash(password, 10);
 
-  await prisma.user.create({
-    data: {
-      name,
-      email: email.toLowerCase(),
-      password: hashedPassword,
-    },
-  });
+  // await prisma.user.create({
+  //   data: {
+  //     name,
+  //     email: email.toLowerCase(),
+  //     password: hashedPassword,
+  //   },
+  // });
 
   return NextResponse.json("User created successfully!", { status: 200 });
 }
