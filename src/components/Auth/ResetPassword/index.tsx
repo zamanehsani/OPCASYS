@@ -59,16 +59,16 @@ const ResetPassword = ({ token }: { token: string }) => {
     }
 
     try {
-      const res = await axios.post(`/api/forgot-password/update`, {
-        email: user?.email,
-        password: data.newPassword,
-      });
+      // const res = await axios.post(`/api/forgot-password/update`, {
+      //   email: user?.email,
+      //   password: data.newPassword,
+      // });
 
-      if (res.status === 200) {
-        toast.success(res.data);
-        setData({ newPassword: "", ReNewPassword: "" });
-        router.push("/signin");
-      }
+      // if (res.status === 200) {
+      //   toast.success(res.data);
+      //   setData({ newPassword: "", ReNewPassword: "" });
+      //   router.push("/signin");
+      // }
 
       setLoader(false);
     } catch (error: any) {
