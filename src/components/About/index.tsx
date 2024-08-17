@@ -16,13 +16,14 @@ const About = () => {
                 </h2>
                 <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
                   Our fully independent rebate center is the one-stop
-                  destination for all your rebate needs. Whether you're looking
-                  to adjust a rebate, track the status of your rebates, or
-                  simply create a rebate structure for one introducing broker or
-                  various Introducing broker groups, our user-friendly platform
-                  has you covered. With a dedicated team of professionals ready
-                  to assist you every step of the way, we strive to make the
-                  rebate process as seamless and hassle-free as possible.
+                  destination for all your rebate needs. Whether you&apos;re
+                  looking to adjust a rebate, track the status of your rebates,
+                  or simply create a rebate structure for one introducing broker
+                  or various Introducing broker groups, our user-friendly
+                  platform has you covered. With a dedicated team of
+                  professionals ready to assist you every step of the way, we
+                  strive to make the rebate process as seamless and hassle-free
+                  as possible.
                   <br /> <br />
                   Save time and money by taking advantage of the rebate centers
                   friendly user interface or switch to advance mode.
@@ -39,16 +40,14 @@ const About = () => {
 
             <div className="w-full px-4 lg:w-1/2">
               <div className="-mx-2 flex flex-wrap  sm:-mx-4 lg:-mx-2 xl:-mx-4">
-                <img src="/images/about/rebate.png" alt="" className="w-full" />
-                <div className="w-full px-2 sm:w-1/2 sm:px-4 lg:px-2 xl:px-4">
-                  {/* <Image
-                    className="h-full w-full"
-                    width={350}
-                    height={200}
-                    src="/images/about/rebate1.png"
-                    alt="about image"
-                  /> */}
-                </div>
+                <Image
+                  className="h-full w-full"
+                  width={350}
+                  height={200}
+                  src="/images/about/rebate.png"
+                  alt="about image"
+                />
+                <div className="w-full px-2 sm:w-1/2 sm:px-4 lg:px-2 xl:px-4"></div>
               </div>
             </div>
           </div>
