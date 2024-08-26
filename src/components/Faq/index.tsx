@@ -8,7 +8,7 @@ const Faq = () => {
         <SectionTitle
           subtitle="FAQ"
           title="Any Questions? Answered"
-          paragraph="Let's share some of the most frequently ased questions by the people of the planet earth. "
+          paragraph="Let's share some of the most frequently asked questions from people around the world."
           width="640px"
           center
         />

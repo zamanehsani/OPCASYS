@@ -22,7 +22,7 @@ const Header = () => {
   const [sticky, setSticky] = useState(false);
   const handleStickyNavbar = () => {
     if (window.scrollY >= 80) {
-      setSticky(true);
+      setSticky(false);
     } else {
       setSticky(false);
     }
@@ -54,25 +54,27 @@ const Header = () => {
       >
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
-            <div className="w-44 max-w-full px-4">
-              <Link
+            <div className="w-64 max-w-full px-4">
+              {/* removed the logo from the top  */}
+
+              {/* <Link
                 href="/"
                 className={`navbar-logo block w-full ${sticky ? "py-2" : "py-5"} `}
               >
                 {pathUrl !== "/" ? (
                   <>
                     <Image
-                      src={`/images/logo/crm-logo.svg`}
+                      src={`/images/logo/opcasys-logo-white.svg`}
                       alt="logo"
-                      width={240}
-                      height={30}
+                      width={1500}
+                      height={250}
                       className="header-logo w-full dark:hidden"
                     />
                     <Image
-                      src={`/images/logo/crm-logo-white.svg`}
+                      src={`/images/logo/opcasys-logo.svg`}
                       alt="logo"
-                      width={240}
-                      height={30}
+                      width={1500}
+                      height={250}
                       className="header-logo hidden w-full dark:block"
                     />
                   </>
@@ -81,62 +83,29 @@ const Header = () => {
                     <Image
                       src={`${
                         sticky
-                          ? "/images/logo/crm-logo.svg"
-                          : "/images/logo/crm-logo-white.svg"
+                          ? "/images/logo/opcasys-logo-white.svg"
+                          : "/images/logo/opcasys-logo.svg"
                       }`}
                       alt="logo"
-                      width={140}
-                      height={30}
+                      width={1500}
+                      height={250}
                       className="header-logo w-full dark:hidden"
                     />
                     <Image
-                      src={"/images/logo/crm-logo-white.svg"}
+                      src={"/images/logo/opcasys-logo.svg"}
                       alt="logo"
-                      width={140}
-                      height={30}
+                      width={1500}
+                      height={250}
                       className="header-logo hidden w-full dark:block"
                     />
                   </>
                 )}
-              </Link>
+              </Link> */}
             </div>
             <div className="flex w-full items-center justify-between  px-4">
               <div className="flex-auto ">
                 <div className=" flex items-center justify-center">
-                  <button
-                    onClick={navbarToggleHandler}
-                    id="navbarToggler"
-                    aria-label="Mobile Menu"
-                    className="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
-                  >
-                    <span
-                      className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
-                        navbarOpen ? " top-[7px] rotate-45" : " "
-                      } ${pathUrl !== "/" && "!bg-dark dark:!bg-white"} ${
-                        pathUrl === "/" && sticky
-                          ? "bg-dark dark:bg-white"
-                          : "bg-white"
-                      }`}
-                    />
-                    <span
-                      className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
-                        navbarOpen ? "opacity-0 " : " "
-                      } ${pathUrl !== "/" && "!bg-dark dark:!bg-white"} ${
-                        pathUrl === "/" && sticky
-                          ? "bg-dark dark:bg-white"
-                          : "bg-white"
-                      }`}
-                    />
-                    <span
-                      className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
-                        navbarOpen ? " top-[-8px] -rotate-45" : " "
-                      } ${pathUrl !== "/" && "!bg-dark dark:!bg-white"} ${
-                        pathUrl === "/" && sticky
-                          ? "bg-dark dark:bg-white"
-                          : "bg-white"
-                      }`}
-                    />
-                  </button>
+                  {/* the mobiel screen button is removed from here */}
                   <nav
                     id="navbarCollapse"
                     className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300 dark:border-body-color/20 dark:bg-dark-2 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 lg:dark:bg-transparent ${
@@ -266,7 +235,7 @@ const Header = () => {
                 <button
                   aria-label="theme toggler"
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                  className="mx-4 flex h-8 w-8 items-center justify-center text-body-color duration-300 dark:text-white"
+                  className="mx-4 mt-2 flex h-8 w-8 items-center justify-center text-body-color duration-300 dark:text-white"
                 >
                   <span>
                     <svg
@@ -291,7 +260,7 @@ const Header = () => {
 
                 {session?.user ? (
                   <>
-                    <p
+                    {/* <p
                       className={`loginBtn px-7 py-3 text-base font-medium ${
                         !sticky && pathUrl === "/" ? "text-white" : "text-dark"
                       }`}
@@ -303,16 +272,16 @@ const Header = () => {
                         onClick={() => signOut()}
                         className="signUpBtn rounded-lg bg-primary bg-opacity-100 px-6 py-3 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-20 hover:text-dark"
                       >
-                        Sign Out
+                        Pre Sale
                       </button>
                     ) : (
                       <button
                         onClick={() => signOut()}
                         className="signUpBtn rounded-lg bg-white bg-opacity-20 px-6 py-3 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-100 hover:text-dark"
                       >
-                        Sign Out
+                        Pre Sale
                       </button>
-                    )}
+                    )} */}
                   </>
                 ) : (
                   <>
@@ -324,12 +293,12 @@ const Header = () => {
                         >
                           Sign In
                         </Link> */}
-                        <Link
-                          href="/signup"
+                        {/* <Link
+                          href="/"
                           className="rounded-lg bg-primary px-6 py-3 text-base font-medium text-white duration-300 ease-in-out hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20"
                         >
-                          Sign Up
-                        </Link>
+                          Pre Sale
+                        </Link> */}
                       </>
                     ) : (
                       <>
@@ -341,16 +310,16 @@ const Header = () => {
                         >
                           Sign In
                         </Link> */}
-                        <Link
-                          href="/signup"
+                        {/* <Link
+                          href="/"
                           className={`rounded-lg px-6 py-3 text-base font-medium text-white duration-300 ease-in-out ${
                             sticky
                               ? "bg-primary hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20"
                               : "bg-white/10 hover:bg-white/20"
                           }`}
                         >
-                          Sign Up
-                        </Link>
+                          Pre Sale
+                        </Link> */}
                       </>
                     )}
                   </>

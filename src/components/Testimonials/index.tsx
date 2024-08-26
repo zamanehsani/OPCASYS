@@ -39,7 +39,7 @@ const Testimonials = () => {
         <SectionTitle
           subtitle="Testimonials"
           title="What our Client Say"
-          paragraph="There are happy people in this planet that uses our services and makes MONEY!"
+          paragraph="There are happy people on this planet who use our services and make money!"
           width="640px"
           center
         />

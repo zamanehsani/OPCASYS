@@ -5,7 +5,7 @@ import { Client } from "@/types/client";
 const SingleClient = ({ client }: { client: Client }) => {
   const { title, link, logo, logoWhite } = client;
   return (
-    <div className="ud-single-logo mb-5 mr-10 max-w-[140px]">
+    <div className="carousel-slide ud-single-logo mb-5 mr-10 max-w-[140px]">
       <Link href={link} target="_blank" rel="nofollow noopner">
         <Image
           src={logo}

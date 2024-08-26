@@ -37,28 +37,28 @@ const PricingBox = ({ product }: { product: Price }) => {
           {product.nickname}
         </span>
         <h2 className=" text-4xl font-semibold text-dark dark:text-white xl:text-[42px] xl:leading-[1.21]">
-          <span className="text-xl font-medium">$ </span>
+          <span className="text-xl font-medium">&#8364; </span>
           <span className="-ml-1 -tracking-[2px]">
             {(product.unit_amount / 100).toLocaleString("en-US", {
               currency: "USD",
             })}
           </span>
-          <span className="text-base font-normal text-body-color dark:text-dark-6">
+          <span className=" text-sm font-normal text-body-color dark:text-dark-6">
             {" "}
-            Per Month
+            Recurring (incl. VAT)
           </span>
         </h2>
 
         <h5 className="mb-11 font-semibold text-dark dark:text-white  xl:leading-[1.21]">
-          <span className="">$ </span>
+          <span className="">&#8364; &nbsp;</span>
           <span className="-ml-1 -tracking-[2px]">
             {(product.recurring / 100).toLocaleString("en-US", {
               currency: "USD",
             })}
           </span>
-          <span className="text-base font-normal text-body-color dark:text-dark-6">
-            {" "}
-            (incl. VAT)
+          <span className="text-sm font-normal text-body-color dark:text-dark-6">
+            {"  "}
+            (Setup Fee)
           </span>
         </h5>
 
@@ -77,7 +77,7 @@ const PricingBox = ({ product }: { product: Price }) => {
             onClick={handleSubscription}
             className="inline-block rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white transition duration-300 hover:bg-primary/90"
           >
-            Purchase Now
+            Pre Sale
           </button>
         </div>
       </div>

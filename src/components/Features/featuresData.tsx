@@ -31,7 +31,7 @@ const featuresData: Feature[] = [
     ),
     title: "Member Area Customization",
     paragraph: "Unlimited Customizable user interfaces.",
-    btn: "Learn More",
+    btn: "",
     btnLink: "/#",
   },
   {
@@ -52,7 +52,7 @@ const featuresData: Feature[] = [
     ),
     title: "Engaging Onboarding",
     paragraph: "Exciting experience and fun onboarding client process.",
-    btn: "Learn More",
+    btn: "",
     btnLink: "/#",
   },
   {
@@ -74,8 +74,8 @@ const featuresData: Feature[] = [
 
     title: "Loyalty Program",
     paragraph:
-      "Reward your customers for their continoud support and patronage.",
-    btn: "Learn More",
+      "Reward your customers for their continued support and patronage.",
+    btn: "",
     btnLink: "/#",
   },
   {
@@ -89,16 +89,16 @@ const featuresData: Feature[] = [
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M3 2C1.34315 2 0 3.34315 0 5V16C0 17.6569 1.34315 19 3 19H7V22L10.7071 19H21C22.6569 19 24 17.6569 24 16V5C24 3.34315 22.6569 2 21 2H3ZM2 5C2 4.44772 2.44772 4 3 4H21C21.5523 4 22 4.44772 22 5V16C22 16.5523 21.5523 17 21 17H10.2929L7 20.2929V17H3C2.44772 17 2 16.5523 2 16V5Z"
           fill="white"
         />
       </svg>
     ),
     title: "Internal Chat",
-    paragraph: "Seamless communication among team member.",
-    btn: "Learn More",
+    paragraph: "Seamless communication among team members.",
+    btn: "",
     btnLink: "/#",
   },
   {
@@ -112,16 +112,17 @@ const featuresData: Feature[] = [
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V8.41421C21 8.01639 20.842 7.63486 20.5607 7.35355L14.6464 1.43934C14.3651 1.15804 13.9836 1 13.5858 1H6ZM6 4H13V8C13 9.10457 13.8954 10 15 10H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4Z"
           fill="white"
         />
       </svg>
     ),
-    title: "DocSign",
-    paragraph: "Inplatform document signing to make exciting client journey.",
-    btn: "Learn More",
+    //  DocSign and Doc u sing is taken and is trademark
+    title: "Document Signing",
+    paragraph: "In-platform document signing to enhance the client journey.",
+    btn: "",
     btnLink: "/#",
   },
   {
@@ -135,8 +136,8 @@ const featuresData: Feature[] = [
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20C7.58 20 4 16.42 4 12ZM12 6C11.45 6 11 6.45 11 7V12C11 12.55 11.45 13 12 13C12.55 13 13 12.55 13 12V7C13 6.45 12.55 6 12 6ZM13 16C13 16.55 12.55 17 12 17C11.45 17 11 16.55 11 16C11 15.45 11.45 15 12 15C12.55 15 13 15.45 13 16Z"
           fill="white"
         />
@@ -144,8 +145,8 @@ const featuresData: Feature[] = [
     ),
     title: "Live Support",
     paragraph:
-      "Providing support quick and efficient whenever they customers need.",
-    btn: "Learn More",
+      "Providing quick and efficient support whenever customers need it.",
+    btn: "",
     btnLink: "/#",
   },
   {
@@ -159,17 +160,17 @@ const featuresData: Feature[] = [
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M12 2C9.79 2 8 3.79 8 6C8 8.21 9.79 10 12 10C14.21 10 16 8.21 16 6C16 3.79 14.21 2 12 2ZM10 6C10 4.9 10.9 4 12 4C13.1 4 14 4.9 14 6C14 7.1 13.1 8 12 8C10.9 8 10 7.1 10 6ZM4 20C4 16.13 7.13 13 11 13H13C16.87 13 20 16.13 20 20V22H18V20C18 17.24 15.76 15 13 15H11C8.24 15 6 17.24 6 20V22H4V20Z"
           fill="white"
         />
       </svg>
     ),
-    title: "HR Suit",
+    title: "HR Suite",
     paragraph:
-      "Innovative HR suit that eleminate the need for multiple integrations.",
-    btn: "Learn More",
+      "Innovative HR suite that eliminates the need for multiple integrations.",
+    btn: "",
     btnLink: "/#",
   },
   {
@@ -183,17 +184,16 @@ const featuresData: Feature[] = [
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M7 2C7.55228 2 8 2.44772 8 3V4H16V3C16 2.44772 16.4477 2 17 2C17.5523 2 18 2.44772 18 3V4H20C21.1046 4 22 4.89543 22 6V20C22 21.1046 21.1046 22 20 22H4C2.89543 22 2 21.1046 2 20V6C2 4.89543 2.89543 4 4 4H6V3C6 2.44772 6.44772 2 7 2ZM4 8V20H20V8H4ZM9 11H11V13H9V11ZM13 11H15V13H13V11ZM9 15H11V17H9V15ZM13 15H15V17H13V15ZM7 4H17V6H7V4Z"
           fill="white"
         />
       </svg>
     ),
-    title: "Calender",
-    paragraph:
-      "Manage appointments for both, clients  and internally with staff.",
-    btn: "Learn More",
+    title: "Exclusive Calendar",
+    paragraph: "Manage appointments for both clients and staff internally.",
+    btn: "",
     btnLink: "/#",
   },
 ];

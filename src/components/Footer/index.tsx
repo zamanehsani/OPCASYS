@@ -9,22 +9,22 @@ const Footer = () => {
     >
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-3/12">
-            <div className="mb-10 w-full">
-              <Link href="/" className="mb-6 inline-block max-w-[160px]">
+          <div className="w-full  px-4">
+            <div className=" flex w-full flex-col">
+              <Link href="/" className="mx-auto  inline-block">
                 <Image
-                  src="/images/logo/crm-logo-white.svg"
+                  src="/images/logo/opcasys-logo.svg"
                   alt="logo"
-                  width={140}
-                  height={30}
+                  width={800}
+                  height={150}
                   className="max-w-full"
                 />
                 {/* <h1 className="text-3xl font-bold">X - CRM</h1> */}
               </Link>
-              <p className="mb-8 max-w-[270px] text-base text-gray-7">
+              <p className="mb-8 text-center text-base text-gray-7">
                 We have come to help the industry and grow your revenue.
               </p>
-              <div className="-mx-3 flex items-center">
+              <div className="-mx-3 flex items-center justify-center">
                 <a
                   aria-label="social link"
                   href="/#"
@@ -94,7 +94,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
+          {/* <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
             <div className="mb-10 w-full">
               <h4 className="mb-9 text-lg font-semibold text-white">
                 About Us
@@ -257,11 +257,11 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
-      <div className="mt-12 border-t border-[#8890A4] border-opacity-40 py-8 lg:mt-[60px]">
+      <div className="mt-12 border-t border-[#8890A4] border-opacity-40 py-4 lg:mt-[60px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-2/3 lg:w-1/2">

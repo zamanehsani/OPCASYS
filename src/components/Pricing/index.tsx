@@ -14,7 +14,7 @@ const Pricing = () => {
           <SectionTitle
             subtitle="Pricing Table"
             title="Our Pricing Plan"
-            paragraph="We are offering the best price for the highest services. Our prices may change. Please keep an eye on this."
+            paragraph="We offer the best prices for the highest quality services. Please note that our prices may change, so keep an eye on this."
             center
           />
         </div>

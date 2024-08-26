@@ -14,7 +14,7 @@ const teamData: TeamType[] = [
   },
   {
     id: 2,
-    name: "Chen Yeng",
+    name: "Tina Fey",
     designation: "UI/UX Designer",
     image: "/images/team/team-03.png",
     facebookLink: "/#",
@@ -52,7 +52,7 @@ const Team = () => {
           <SectionTitle
             subtitle="Our Team"
             title="Meet Our Team"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            paragraph="Meet the Dream Team: Uniting Talent and Passion to Drive Your Vision Forward!"
             width="640px"
             center
           />

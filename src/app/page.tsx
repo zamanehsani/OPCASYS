@@ -1,7 +1,7 @@
 import About from "@/components/About";
-import HomeBlogSection from "@/components/Blog/HomeBlogSection";
+// import HomeBlogSection from "@/components/Blog/HomeBlogSection";
 import CallToAction from "@/components/CallToAction";
-import Clients from "@/components/Clients";
+// import Clients from "@/components/Clients";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
 import Faq from "@/components/Faq";
@@ -14,8 +14,8 @@ import { getAllPosts } from "@/utils/markdown";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The X CRM",
-  description: "the best description here..",
+  title: "OPCASYS",
+  description: "The best CRM for Forex",
 };
 
 export default function Home() {
