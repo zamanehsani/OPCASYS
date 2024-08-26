@@ -17,16 +17,17 @@ const About = () => {
                 </h2>
                 <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
                   Our fully independent rebate center is the one-stop
-                  destination for all your rebate needs. Whether you're looking
-                  to adjust a rebate, track its status, or create a rebate
-                  structure for a single introducing broker or various
+                  destination for all your rebate needs. Whether you&apos;re
+                  looking to adjust a rebate, track its status, or create a
+                  rebate structure for a single introducing broker or various
                   introducing broker groups, our user-friendly platform has you
                   covered. With a dedicated team of professionals ready to
                   assist you every step of the way, we strive to make the rebate
                   process as seamless and hassle-free as possible.
                   <br /> <br />
-                  Save time and money by taking advantage of the rebate center's
-                  friendly user interface, or switch to advanced mode.
+                  Save time and money by taking advantage of the rebate
+                  center&apos;s friendly user interface, or switch to advanced
+                  mode.
                 </p>
 
                 <a
