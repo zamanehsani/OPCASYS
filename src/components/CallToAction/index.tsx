@@ -5,25 +5,48 @@ import { clientsData } from "../Clients/clientsData";
 const CallToAction = () => {
   return (
     <section className="relative z-10 overflow-hidden bg-primary py-10 lg:py-[50px]">
-      <div className="container mx-auto">
-        <div className="relative overflow-hidden">
-          <div className="-mx-4 flex flex-wrap items-stretch">
-            <div className="w-full ">
-              <div className="mx-auto max-w-[570px] text-center">
-                <h2 className="mb-2.5 text-3xl font-bold text-white md:text-[38px] md:leading-[1.44]">
-                  <span>Free PSP Integration</span>
-                </h2>
-              </div>
-              <div className="-mx-4 flex flex-wrap items-center justify-center gap-5 xl:gap-11">
-                {clientsData.map((client, i) => (
-                  <SingleClient key={i} client={client} />
-                ))}
-              </div>
-            </div>
+      <div className="container mx-auto items-center justify-center">
+        {/* Container with overflow-x-auto to enable horizontal scrolling */}
+        <div className="relative mx-auto max-w-[570px] text-center">
+          <h2 className="mb-2.5 text-3xl font-bold text-white md:text-[38px] md:leading-[1.44]">
+            <span>Free PSP Integration</span>
+          </h2>
+        </div>
+
+        {/* Scrollable items container */}
+        {/* Centered and Scrollable Items Container */}
+        <div className="relative w-full overflow-x-auto">
+          <div
+            className="scrollbar-hide mx-auto flex max-w-screen-lg justify-center space-x-4 overflow-x-auto p-4"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {/* Hide scrollbar for WebKit browsers */}
+            <style>
+              {`
+            .scrollbar-hide::-webkit-scrollbar {
+              display: none;
+            }
+          `}
+            </style>
+
+            <img className="px-8" src="/images/brands/Praxis-Logo.png" />
+            <img
+              className="px-2"
+              src="/images/brands/Skrill-Logo.svg"
+              width={160}
+            />
+            <img
+              className="px-2"
+              src="/images/brands/b2binpay.svg"
+              width={290}
+            />
+            <img className="px-2" src="images/brands/stripe.svg" width={220} />
           </div>
         </div>
       </div>
-      <div>
+
+      {/* Background SVGs can be placed here if needed */}
+      {/* <div className="container">
         <span className="absolute left-0 top-0">
           <svg
             width="495"
@@ -87,7 +110,7 @@ const CallToAction = () => {
             />
           </svg>
         </span>
-      </div>
+      </div> */}
     </section>
   );
 };
