@@ -57,7 +57,7 @@ const Header = () => {
             <div className="w-64 max-w-full px-4">
               {/* removed the logo from the top  */}
 
-              {/* <Link
+              <Link
                 href="/"
                 className={`navbar-logo block w-full ${sticky ? "py-2" : "py-5"} `}
               >
@@ -100,7 +100,7 @@ const Header = () => {
                     />
                   </>
                 )}
-              </Link> */}
+              </Link>
             </div>
             <div className="flex w-full items-center justify-between  px-4">
               <div className="flex-auto ">
@@ -260,7 +260,7 @@ const Header = () => {
 
                 {session?.user ? (
                   <>
-                    {/* <p
+                    <p
                       className={`loginBtn px-7 py-3 text-base font-medium ${
                         !sticky && pathUrl === "/" ? "text-white" : "text-dark"
                       }`}
@@ -281,7 +281,7 @@ const Header = () => {
                       >
                         Pre Sale
                       </button>
-                    )} */}
+                    )}
                   </>
                 ) : (
                   <>
@@ -293,12 +293,12 @@ const Header = () => {
                         >
                           Sign In
                         </Link> */}
-                        {/* <Link
+                        <Link
                           href="/"
                           className="rounded-lg bg-primary px-6 py-3 text-base font-medium text-white duration-300 ease-in-out hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20"
                         >
                           Pre Sale
-                        </Link> */}
+                        </Link>
                       </>
                     ) : (
                       <>
@@ -310,7 +310,7 @@ const Header = () => {
                         >
                           Sign In
                         </Link> */}
-                        {/* <Link
+                        <Link
                           href="/"
                           className={`rounded-lg px-6 py-3 text-base font-medium text-white duration-300 ease-in-out ${
                             sticky
@@ -319,7 +319,7 @@ const Header = () => {
                           }`}
                         >
                           Pre Sale
-                        </Link> */}
+                        </Link>
                       </>
                     )}
                   </>
