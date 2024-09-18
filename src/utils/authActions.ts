@@ -20,7 +20,6 @@ export const registerUser = async (data: SignUpData) => {
       },
     });
 
-    console.log(dbUser, "user");
     if (dbUser?.id) {
       return {
         body: JSON.stringify({
@@ -36,6 +35,7 @@ export const registerUser = async (data: SignUpData) => {
         email: body.email,
         password: hashPassword,
         lastName: body.lastName,
+        phone: body.phone,
       },
     });
 

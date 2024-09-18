@@ -10,4 +10,5 @@ export const signUpSchema = z.object({
   lastName: z.string().min(2),
   email: z.string().email({ message: "Your email is invalid." }),
   password: z.string(),
+  phone: z.string().min(10, { message: "Your phone number is invalid." }),
 });

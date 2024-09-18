@@ -33,7 +33,8 @@ export const authOptions: NextAuthOptions = {
             name: true,
             email: true,
             password: true,
-            image: true,
+            emailVerified: true,
+            lastName: true,
           },
         });
 
@@ -55,7 +56,8 @@ export const authOptions: NextAuthOptions = {
             id: user.id,
             name: user.name,
             email: user.email,
-            image: user.image,
+            emailVerified: user.emailVerified,
+            lastName: user.lastName,
           };
         }
 
@@ -76,20 +78,25 @@ export const authOptions: NextAuthOptions = {
   },
 
   callbacks: {
-    jwt({ token }) {
-      return {
-        id: token.id,
-        name: token.name,
-        email: token.email,
-        picture: "",
-      };
+    jwt({ token, user }: any) {
+      if (user) {
+        return {
+          id: token.id,
+          name: token.name,
+          email: token.email,
+          lastName: user.lastName,
+          emailVerified: user.emailVerified,
+        };
+      }
+      return token;
     },
     async session({ token, session }) {
       if (token && session?.user) {
         session.user.id = token.id;
         session.user.name = token.name;
         session.user.email = token.email;
-        session.user.image = token.picture;
+        session.user.lastName = token.lastName;
+        session.user.emailVerified = token.emailVerified;
       }
 
       return session;
@@ -98,6 +105,7 @@ export const authOptions: NextAuthOptions = {
   secret: NEXTAUTH_SECRET,
   session: {
     strategy: "jwt",
+    maxAge: 30 * 24 * 60 * 60,
   },
   pages: {
     signIn: "/signin",

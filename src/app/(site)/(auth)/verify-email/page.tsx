@@ -1,7 +1,6 @@
 import Image from "next/image";
-import WhoYouAreForm from "./Form";
 
-const WhoYouAre = () => {
+const page = () => {
   return (
     <section className="min-h-screen bg-[#F4F7FF] py-14 dark:bg-dark lg:py-20">
       <div className="container">
@@ -28,14 +27,11 @@ const WhoYouAre = () => {
                     className="header-logo hidden w-[50%] dark:block"
                   />
                 </div>
-                <p className="text-body-secondary text-base ">
-                  Welcome to OpcaSys
-                  <br />
-                  Please fill in the following details to get started...
+                <p className="text-body-secondary text-base">
+                  Please check your email for a 6-digit verification code. Enter
+                  the code below to verify your identity.
                 </p>
               </div>
-
-              <WhoYouAreForm />
 
               {/* beauty of UI */}
               <div>
@@ -264,4 +260,4 @@ const WhoYouAre = () => {
   );
 };
 
-export default WhoYouAre;
+export default page;
