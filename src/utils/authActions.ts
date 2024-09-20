@@ -64,3 +64,51 @@ export const registerUser = async (data: SignUpData) => {
     };
   }
 };
+
+export const verifyEmailCode = async (userEmail: string, code: string) => {
+  try {
+    const verificationRecord = await db.verificationCode.findFirst({
+      where: {
+        email: userEmail,
+      },
+    });
+
+    if (
+      !verificationRecord ||
+      verificationRecord.code !== code ||
+      verificationRecord.expiresAt < new Date()
+    ) {
+      return {
+        status: 400,
+        error: "Invalid verification code or expired",
+      };
+    }
+
+    // Update user's emailVerified field
+    const userUpdate = await db.user.update({
+      where: { email: userEmail },
+      data: { emailVerified: new Date() },
+    });
+
+    // Optionally, delete the verification record
+    const del = await db.verificationCode.delete({
+      where: { id: verificationRecord.id },
+    });
+
+    console.log({
+      userUpdate,
+      del,
+    });
+
+    return {
+      status: 200,
+      message: "Email verified successfully",
+    };
+  } catch (error) {
+    console.log(error);
+    return {
+      status: 500,
+      error: "Something went wrong",
+    };
+  }
+};

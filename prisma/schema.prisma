@@ -71,3 +71,17 @@ model VerificationToken {
   @@map("verification_tokens")
 }
 
+
+model VerificationCode {
+  id         String   @id @default(uuid())
+  email      String
+  code       String
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+
+  @@map("verification_codes")
+
+  @@index([email])
+}

@@ -1,6 +1,7 @@
+import CodeInput from "@/components/Auth/WhoYouAre/CodeInput";
 import Image from "next/image";
 
-const page = () => {
+const page = async () => {
   return (
     <section className="min-h-screen bg-[#F4F7FF] py-14 dark:bg-dark lg:py-20">
       <div className="container">
@@ -31,6 +32,7 @@ const page = () => {
                   Please check your email for a 6-digit verification code. Enter
                   the code below to verify your identity.
                 </p>
+                <CodeInput />
               </div>
 
               {/* beauty of UI */}

@@ -78,7 +78,10 @@ export const authOptions: NextAuthOptions = {
   },
 
   callbacks: {
-    jwt({ token, user }: any) {
+    jwt({ token, user, account, profile, trigger, isNewUser, session }: any) {
+      if (trigger === "update") {
+        return { ...token, emailVerified: session?.data?.user?.emailVerified };
+      }
       if (user) {
         return {
           id: token.id,
