@@ -49,6 +49,11 @@ const CodeInput = () => {
 
   return (
     <div className="relative my-6 flex flex-col items-center justify-center gap-2">
+      <VerificationInput
+        autoFocus
+        placeholder=""
+        onComplete={handleCodeCompleted}
+      />
       {status === "loading" ||
         emailSending ||
         (verifyingCode && (
@@ -56,11 +61,6 @@ const CodeInput = () => {
             <Loader />
           </div>
         ))}
-      <VerificationInput
-        autoFocus
-        placeholder=""
-        onComplete={handleCodeCompleted}
-      />
     </div>
   );
 };
