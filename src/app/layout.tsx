@@ -6,7 +6,10 @@ import { ThemeProvider } from "next-themes";
 import "../styles/index.css";
 import "../styles/prism-vsc-dark-plus.css";
 // import ToasterContext from "./api/contex/ToasetContex";
+import AuthCheckProvider from "@/components/Common/AuthCheckProvider";
 import PreLoader from "@/components/Common/PreLoader";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import { useEffect, useState } from "react";
 
 export default function RootLayout({
@@ -38,8 +41,11 @@ export default function RootLayout({
               enableSystem={false}
               defaultTheme="dark"
             >
-              {children}
-
+              <AuthCheckProvider>
+                <Header />
+                {children}
+                <Footer />
+              </AuthCheckProvider>
               <ScrollToTop />
             </ThemeProvider>
           </SessionProvider>

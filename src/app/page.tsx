@@ -1,4 +1,6 @@
 import About from "@/components/About";
+import LoginModal from "@/components/Auth/LoginModal";
+import VerificationModal from "@/components/Auth/VerificationModal";
 // import HomeBlogSection from "@/components/Blog/HomeBlogSection";
 import CallToAction from "@/components/CallToAction";
 // import Clients from "@/components/Clients";
@@ -34,6 +36,8 @@ export default function Home() {
       <Team />
       {/* <HomeBlogSection posts={posts} /> */}
       <Contact />
+      <LoginModal />
+      <VerificationModal />
       {/* <Clients /> */}
     </main>
   );

@@ -1,4 +1,5 @@
 "use client";
+import { useAuthCheck } from "@/components/Common/AuthCheckProvider";
 import Loader from "@/components/Common/Loader";
 import { registerUser } from "@/utils/authActions";
 import { signUpSchema } from "@/utils/authValidations";
@@ -8,6 +9,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 
 const WhoYouAreForm = () => {
+  const { setLoginModalOpen } = useAuthCheck();
   const [isPending, startTransition] = React.useTransition();
   const {
     register,
@@ -33,7 +35,7 @@ const WhoYouAreForm = () => {
       redirect: false,
     });
     if (response?.ok) {
-      window.location.assign("/home");
+      setLoginModalOpen(false);
       reset();
     } else if (response?.error) {
       console.log("hello from login");

@@ -3,7 +3,7 @@ import WhoYouAreForm from "./Form";
 
 const WhoYouAre = () => {
   return (
-    <section className="min-h-screen bg-[#F4F7FF] py-14 dark:bg-dark lg:py-20">
+    <section className=" ">
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">

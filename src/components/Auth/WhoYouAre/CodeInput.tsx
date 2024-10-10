@@ -39,7 +39,7 @@ const CodeInput = () => {
           },
         }).then(() => {
           setVerifyingCode(false);
-          router.push("/home");
+          window.location.assign("/");
         });
       }
 
