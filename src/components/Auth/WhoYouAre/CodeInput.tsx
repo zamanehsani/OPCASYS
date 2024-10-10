@@ -1,4 +1,5 @@
 "use client";
+import { useAuthCheck } from "@/components/Common/AuthCheckProvider";
 import Loader from "@/components/Common/Loader";
 import { verifyEmailCode } from "@/utils/authActions";
 import { sendVerificationEmail } from "@/utils/emailActions";
@@ -7,6 +8,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import VerificationInput from "react-verification-input";
 const CodeInput = () => {
+  const { setEmailVerificationModalOpen } = useAuthCheck();
   const [emailSending, setEmailSending] = useState(false);
   const [verifyingCode, setVerifyingCode] = useState(false);
   const router = useRouter();
@@ -39,10 +41,9 @@ const CodeInput = () => {
           },
         }).then(() => {
           setVerifyingCode(false);
-          window.location.assign("/");
+          setEmailVerificationModalOpen(false);
         });
       }
-
       setVerifyingCode(false);
     }
   };

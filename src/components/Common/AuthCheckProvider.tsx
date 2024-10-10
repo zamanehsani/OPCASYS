@@ -34,6 +34,7 @@ const AuthCheckProvider = ({ children }: PropsWithChildren) => {
       setEmailVerificationModalOpen(true);
       return;
     }
+    document.body.style.overflow = "auto";
   }, [session]);
   return (
     <AuthContext.Provider
